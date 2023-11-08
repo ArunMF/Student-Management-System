@@ -1,0 +1,21 @@
+export class Student{
+    id?:string
+    firstname?:string
+    lastname?:string
+    email?:string
+    phone?:string
+    courseid?:string
+    batchid?:string
+    address?:string
+    district?:string
+    state?:string
+    pcode?:string
+    sslcperc?:string
+    sslcboard?:string
+    sslcinst?:string
+    sslcyear?:string
+    plusperc?:string
+    plusboard?:string
+    plusinst?:string
+    plusyear?:string
+}

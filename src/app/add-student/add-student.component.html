@@ -1,0 +1,164 @@
+<!-- Personal -->
+<div class="container mt-5">
+    <div class="border-b border-gray-900/10 pb-12">
+        <h2 style="font-family: 'Tauri', sans-serif; font-size: 27px; font-weight: 600;">Personal Information</h2>
+        <p class="mt-1 text-sm leading-6 text-gray-600">Use a permanent address where you can receive mail.</p>
+    
+          <div class="mb-5 mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.firstname" name="firstname" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-3">
+            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.lastname" name="lastname" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-3">
+            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input id="email" [(ngModel)]="students.email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div class="sm:col-span-3">
+            <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Phone</label>
+            <div class="mt-2">
+              <input id="phone" [(ngModel)]="students.phone" name="phone" type="number" autocomplete="phone" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-2">
+            <label for="course" class="block text-sm font-medium leading-6 text-gray-900">Course</label>
+            <div class="mt-2">
+              <select id="course" [(ngModel)]="students.courseid" name="courseid" autocomplete="course-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option selected hidden disabled>{{students.courseid}}</option>
+                <option [value]="course.id" *ngFor="let course of courses">{{course.name}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="admno" class="block text-sm font-medium leading-6 text-gray-900">Admission number</label>
+            <div class="mt-2">
+              <input id="admno" [(ngModel)]="students.id" name="id" type="text" autocomplete="admno" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="batch" class="block text-sm font-medium leading-6 text-gray-900">Batch</label>
+            <div class="mt-2">
+              <select id="batch" [(ngModel)]="students.batchid" name="batchid" autocomplete="batch" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option selected hidden disabled>{{students.batchid}}</option>
+                <option [value]="batch.id" *ngFor="let batch of batches">{{batch.name}}</option>
+              </select>
+            </div>
+          </div>
+    
+          <div class="col-span-full">
+            <label for="permanent-address" class="block text-sm font-medium leading-6 text-gray-900">Permanent address</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.address" name="address" id="permanent-address" autocomplete="permanent-address" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-2 sm:col-start-1">
+            <label for="district" class="block text-sm font-medium leading-6 text-gray-900">District</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.district" name="district" id="district" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-2">
+            <label for="region" class="block text-sm font-medium leading-6 text-gray-900">State</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.state" name="state" id="region" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-2">
+            <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-900">ZIP / Postal code</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.pcode" name="pcode" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+        </div>    
+
+<!-- Education -->
+  <div class="border-b border-gray-900/10 pb-12">
+      <h2 class="mb-4" style="font-family: 'Tauri', sans-serif; font-size: 27px; font-weight: 600;">Education Background</h2>
+      
+      <!-- SSLC -->
+      <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500;"><b>SSLC</b></h2>
+        <div class="mt-3 mb-4 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label for="sslcpercentage" class="block text-sm font-medium leading-6 text-gray-900">Percentage/CGPA</label>
+          <div class="mt-2">
+            <input type="text" [(ngModel)]="students.sslcperc" name="sslcperc" id="percentage" autocomplete="percentage" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+  
+        <div class="sm:col-span-3">
+          <label for="sslcuniversity" class="block text-sm font-medium leading-6 text-gray-900">Board/University</label>
+          <div class="mt-2">
+            <input type="text" [(ngModel)]="students.sslcboard" name="sslcboard" id="university" autocomplete="university" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+  
+        <div class="sm:col-span-4">
+          <label for="sslcinstitute" class="block text-sm font-medium leading-6 text-gray-900">Institute name</label>
+          <div class="mt-2">
+            <input id="institute" [(ngModel)]="students.sslcinst" name="sslcinst" type="text" autocomplete="institute" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="sslcyear" class="block text-sm font-medium leading-6 text-gray-900">Year of passing</label>
+          <div class="mt-2">
+            <input id="year" [(ngModel)]="students.sslcyear" name="sslcyear" type="number" autocomplete="year" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+      </div>
+
+      <!-- Plus Two -->
+        <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 500;"><b>Plus Two</b></h2>
+        <div class="mt-3 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div class="sm:col-span-3">
+            <label for="pluspercentage" class="block text-sm font-medium leading-6 text-gray-900">Percentage/CGPA</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.plusperc" name="plusperc" id="percentage" autocomplete="percentage" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-3">
+            <label for="plusuniversity" class="block text-sm font-medium leading-6 text-gray-900">Board/University</label>
+            <div class="mt-2">
+              <input type="text" [(ngModel)]="students.plusboard" name="plusboard" id="university" autocomplete="university" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+    
+          <div class="sm:col-span-4">
+            <label for="plusinstitute" class="block text-sm font-medium leading-6 text-gray-900">Institute name</label>
+            <div class="mt-2">
+              <input id="institute" [(ngModel)]="students.plusinst" name="plusinst" type="text" autocomplete="institute" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+  
+          <div class="sm:col-span-2">
+            <label for="plusyear" class="block text-sm font-medium leading-6 text-gray-900">Year of passing</label>
+            <div class="mt-2">
+              <input id="year" [(ngModel)]="students.plusyear" name="plusyear" type="number" autocomplete="year" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+  
+          </div>
+      </div>   
+      <!-- <button type="submit" class="btn btn-info mt-2 text-center w-25">Submit</button> -->
+      <button mat-raised-button type="submit" (click)="addStudent()" class="btn text-dark mt-2 text-center w-25" style="background-color: rgb(0, 195, 255);">Submit</button>
+</div>
+

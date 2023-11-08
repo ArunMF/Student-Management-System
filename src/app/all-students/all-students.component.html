@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <ul role="list" class="divide-y divide-gray-100">
+      <li class="flex justify-between gap-x-6 py-3">
+        <div class="flex min-w-0 gap-x-4">
+          <!-- <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
+          <div class="min-w-0 flex-auto">
+            <p href="#" class="text-sm font-semibold leading-6 text-gray-900" style="font-size: 20px;">Admn No. & Name</p>
+          </div>
+        </div>
+        <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+          <p class="text-sm font-semibold leading-6 text-gray-900" style="font-size: 20px;">Course & Batch</p>
+        </div>
+      </li>
+    <li class="flex justify-between gap-x-6 py-1" *ngFor="let student of allStudents">
+      <div class="flex min-w-0 gap-x-4">
+        <!-- <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""> -->
+        <div class="min-w-0 flex-auto">
+          <a href="#" routerLink="/ViewStudent/{{student.id}}" class="text-sm font-semibold leading-6 text-gray-900" style="text-decoration: none;">{{student.id}}</a>
+          <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{student.firstname}} {{student.lastname}}</p>
+        </div>
+      </div>
+      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+        <p class="text-sm leading-6 text-gray-900" *ngFor="let course of allCourses"><span *ngIf="course.id==student.courseid">{{course.name}}</span></p>
+        <p class="truncate text-xs leading-5 text-gray-500" style="margin-top: -10px;" *ngFor="let batch of allBatches"><span *ngIf="batch.id==student.batchid">{{batch.name}}</span></p>
+      </div>
+    </li>
+  </ul>
+  
+</div>

@@ -1,0 +1,137 @@
+{
+  "students": [
+    {
+      "id": "NIATBCA01",
+      "firstname": "Arun",
+      "lastname": "M F",
+      "email": "arunmf@gmail.com",
+      "phone": "9856476383",
+      "courseid": 1,
+      "batchid": 3,
+      "address": "Mynatty house west koratty mambra p o",
+      "district": "Thrissur",
+      "state": "Kerala",
+      "pcode": "680306",
+      "sslcperc": "88",
+      "sslcboard": "State Board",
+      "sslcinst": "L F C H S S Koratty",
+      "sslcyear": "2017",
+      "plusperc": "73",
+      "plusboard": "State Board",
+      "plusinst": "Union H S S Mambra",
+      "plusyear": "2019"
+    },
+    {
+      "id": "NIATBCA02",
+      "firstname": "Albin",
+      "lastname": "Babu",
+      "email": "albin@gmail.com",
+      "phone": "7856476383",
+      "courseid": 2,
+      "batchid": 1,
+      "address": "Edassery house west koratty mambra p o",
+      "district": "Thrissur",
+      "state": "Kerala",
+      "pcode": "680306",
+      "sslcperc": "95",
+      "sslcboard": "State Board",
+      "sslcinst": "L F C H S S Koratty",
+      "sslcyear": "2017",
+      "plusperc": "85",
+      "plusboard": "State Board",
+      "plusinst": "Union H S S Mambra",
+      "plusyear": "2019"
+    },
+    {
+      "id": "NIATBCA03",
+      "firstname": "Jerrin",
+      "lastname": "Siby",
+      "email": "jerrin@gmail.com",
+      "phone": "8778476383",
+      "courseid": 3,
+      "batchid": 2,
+      "address": "Parambi house west koratty mambra p o",
+      "district": "Thrissur",
+      "state": "Kerala",
+      "pcode": "680306",
+      "sslcperc": "99",
+      "sslcboard": "State Board",
+      "sslcinst": "L F Muringoor",
+      "sslcyear": "2017",
+      "plusperc": "90",
+      "plusboard": "State Board",
+      "plusinst": "M A M H S S Koratty",
+      "plusyear": "2019"
+    },
+    {
+      "courseid": "2",
+      "batchid": "2",
+      "firstname": "Amal",
+      "lastname": "Lal",
+      "email": "amal@gmail.com",
+      "phone": 7656566566,
+      "id": "NIATBCA05",
+      "address": "Mynatty house west koratty mambra p o",
+      "district": "Idukki",
+      "state": "Kerala",
+      "pcode": "767483",
+      "sslcperc": "100",
+      "sslcboard": "State Board",
+      "sslcinst": "Union H S S Mambra",
+      "sslcyear": 2017,
+      "plusperc": "95",
+      "plusboard": "State Board",
+      "plusinst": "L F C H S S Koratty",
+      "plusyear": 2019
+    },
+    {
+      "courseid": "1",
+      "batchid": "3",
+      "firstname": "Jerin",
+      "lastname": "M J",
+      "email": "jerinmj@gmail.com",
+      "phone": 7656565623,
+      "id": "NIATBCA10",
+      "address": "Mynatty house west koratty",
+      "district": "Thrissur",
+      "state": "Kerala",
+      "pcode": "875756",
+      "sslcperc": "95",
+      "sslcboard": "State Board",
+      "sslcinst": "L F C H S S Koratty",
+      "sslcyear": 2015,
+      "plusperc": "90",
+      "plusboard": "State Board",
+      "plusinst": "Union H S S Mambra",
+      "plusyear": 2017
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "Bachelor of Computer Applications"
+    },
+    {
+      "id": 2,
+      "name": "Bsc. Computer Science"
+    },
+    {
+      "id": 3,
+      "name": "Bcom. Finance"
+    }
+  ],
+  "batches": [
+    {
+      "id": 1,
+      "name": "2019-2022"
+    },
+    {
+      "id": 2,
+      "name": "2020-2023"
+    },
+    {
+      "id": 3,
+      "name": "2021-2024"
+    }
+  ]
+}

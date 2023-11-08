@@ -1,0 +1,53 @@
+<div class="container my-5">
+    <div class="px-4 sm:px-0">
+        <h2 style="font-family: 'Tauri', sans-serif; font-size: 24px; font-weight: 600;">Student Information</h2>
+      <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and Education.</p>
+    </div>
+    <div class="mt-6 border-t border-gray-100">
+      <dl class="divide-y divide-gray-100">
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900">Admn No.</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{student.id}}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900">Full name</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{student.firstname}} {{student.lastname}}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900">Course & Batch</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{courseName}} [{{batch}}]</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900">Email address</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{student.email}}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-gray-900">Phone</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{student.phone}}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900">Permanent address</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{student.address}}, {{student.district}}, {{student.state}}, {{student.pcode}}</dd>
+        </div>
+        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900">Education</dt>
+          <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+            <div class="divide-y divide-gray-100 rounded-md border border-gray-200">
+              <div class="p-2">
+                <h4><b>SSLC ({{student.sslcboard}})<span style="float: right;">{{student.sslcyear}}</span></b></h4>
+                <p>{{student.sslcinst}}<span style="float: right;">Percentage: {{student.sslcperc}}%</span></p>
+                <p></p>
+              </div>
+              <div class="p-2">
+                <h4><b>Plus Two ({{student.plusboard}})<span style="float: right;">{{student.plusyear}}</span></b></h4>
+                <p>{{student.plusinst}}<span style="float: right;">Percentage: {{student.plusperc}}%</span></p>
+                <p></p>
+              </div>
+            </div>
+          </dd>
+        </div>
+      </dl>
+    </div>
+   <button mat-raised-button type="button" routerLink="/AllStudents" class="btn text-dark mt-2 text-center" style="background-color: rgb(0, 195, 255);">Back</button>
+  </div>
+  

@@ -1,0 +1,15 @@
+.row{
+    width: 100.9%;
+    height: 500px;
+    background-image: url('https://i.postimg.cc/yxzK1vQV/Home-page.jpg');
+    /* height: 100%; */
+    background-size: cover;
+}
+button{
+    height: 50px;
+    width: 220px;
+    margin-top: 374px;
+    margin-left: 215px;
+    font-weight: 600;
+    border-radius: 25px;
+}
